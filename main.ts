@@ -11,6 +11,8 @@ input.onButtonPressed(Button.A, function () {
 input.onButtonPressed(Button.AB, function () {
     if (coins > 10) {
         game.addScore(1)
+    } else {
+        basic.showString("I CANT")
     }
 })
 input.onButtonPressed(Button.B, function () {
@@ -32,6 +34,7 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     if (blocks > 1) {
         blocks += -1
         basic.pause(500)
+        coins += 1
         basic.showString("1 COIN +")
     } else {
         basic.pause(500)
